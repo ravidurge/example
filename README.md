@@ -1,3 +1,7 @@
+#How To Run
+==========
+ansible-playbook vmhardening.yml -K
+
 Role Name
 =========
 
