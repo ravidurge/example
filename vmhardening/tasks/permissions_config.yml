@@ -1,0 +1,16 @@
+---
+- name: Change file ownership of passwd file
+  file : 
+      path: "{{ pwdfile }}"
+      owner: root
+      group: root
+      mode: 0644
+
+
+- name: Change file ownership of group file
+  file : 
+     path: "{{ grpfile }}"
+     owner: root
+     group: root
+     mode: 0644
+   

@@ -1,5 +1,7 @@
 ---
 # tasks file for /etc/ansible/roles/sshconfig
+- import_tasks:  os_config.yml
+- import_tasks:  permissions_config.yml
 - import_tasks:  ssh_config_modify.yml
 
 

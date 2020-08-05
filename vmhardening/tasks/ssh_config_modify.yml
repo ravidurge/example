@@ -1,0 +1,15 @@
+---
+- name: Set PermitRootLogin No
+  lineinfile: dest="{{ sshdconfig }}" regexp="^[#]*PermitRootLogin without-password" line="#PermitRootLogin without-password" backup=true state=present
+
+- name: Set SSH Protocl to 2
+  lineinfile: dest="{{ sshdconfig }}" insertafter="^#Protocol" line="Protocol 2" backup=true state=present
+
+- name: Unset UsePAM yes
+  lineinfile: dest="{{ sshdconfig }}" regexp="^[#]*UsePAM yes" line="#UsePAM yes" backup=true state=present
+
+- name: Set UsePAM NO
+  lineinfile: dest="{{ sshdconfig }}" insertafter="^#UsePAM yes" line="UsePAM no" backup=true state=present
+
+  notify:
+      - Restart SSH Deamon

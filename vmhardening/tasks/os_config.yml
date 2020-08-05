@@ -1,0 +1,12 @@
+---
+- name: Install latest yum updates
+  yum:  name=*  state=latest   exclude=kernel*
+
+- name: Update Password Policy
+  lineinfile: dest="{{ pwdconfig }}" regexp="^PASS_MAX_DAYS   99999" line="PASS_MAX_DAYS   90" backup=true state=present 
+
+- name: Disable USB storage
+  lineinfile: dest="{{ usbfile }}" insertafter="$" line="blacklist usb_storage" backup=true state=present
+
+
+   

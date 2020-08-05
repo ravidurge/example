@@ -1,0 +1,11 @@
+---
+# vars file for /etc/ansible/roles/sshconfig
+sshdconfig: /etc/ssh/sshd_config
+
+pwdconfig: /etc/login.defs
+
+pwdfile : /etc/passwd
+
+grpfile: /etc/group
+
+usbfile: /etc/modprobe.d/blacklist.conf

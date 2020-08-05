@@ -1,12 +1,12 @@
 ---
 # this playbook calls the necessary task files to hardern the linux vm / host
-- name : Setting up secure configuration for the ssh 
+- name : Setting up secure configuration for the hosts 
   hosts: client
   become: true
   become_user: root
 
   roles:
-     - sshconfig
+     - vmhardening
    
    
 
