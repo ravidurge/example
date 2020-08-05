@@ -1,0 +1,7 @@
+---
+# handlers file for /etc/ansible/roles/sshconfig
+- name: Restart SSH Deamon
+  service:
+    name=sshd
+    state=restarted
+    

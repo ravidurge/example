@@ -1,0 +1,8 @@
+---
+# this playbook calls the necessary task files to hardern the linux vm / host
+- hosts: client 
+  become: true
+  become_user: root
+
+  roles:
+     - server_hardening

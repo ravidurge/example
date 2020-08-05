@@ -1,0 +1,7 @@
+---
+# handlers file for /etc/ansible/roles/server_hardening
+- name: restart apache
+  service:
+    name=httpd
+    state=restarted
+    

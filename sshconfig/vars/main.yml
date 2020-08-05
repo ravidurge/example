@@ -1,0 +1,3 @@
+---
+# vars file for /etc/ansible/roles/sshconfig
+sshdconfig: /etc/ssh/sshd_config
